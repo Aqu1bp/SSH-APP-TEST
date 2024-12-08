@@ -13,7 +13,7 @@ Step 1: Build and Run the Backend Using Docker
 Open a terminal and navigate to the project directory.
 Build and start the Docker container for the backend:
 
-    docker compose up --build
+    docker-compose up --build
     
 Step 2: Use Python for http server
 
