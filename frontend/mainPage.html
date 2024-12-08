@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSH Grocery App</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<nav class="bg-white border-b">
+  <div class="p-4 flex">
+    <h1 class="text-xl font-bold text-indigo-700 mt-3">SSH Groceries</h1>
+    
+    <div class="ml-auto flex gap-4">
+
+      <div class="text-sm text-gray-600 flex items-center gap-2">
+        <div class="w-2 h-2 rounded-full"></div>
+        <span id="current-Student"></span>
+      </div>
+
+      <button id="notificationButton" class="p-2">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
+        <span id="notificationCount" class="bg-red-500 text-white rounded-full w-5 h-5 text-sm flex items-center justify-center">
+          0
+        </span>
+      </button>
+
+      <button id="cartButton" class="p-2">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="8" cy="21" r="1" />
+          <circle cx="19" cy="21" r="1" />
+          <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+        </svg>
+        <span id="cartCount" class="bg-red-500 text-white rounded-full w-5 h-5 text-sm flex items-center justify-center">
+          0
+        </span>
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+<div id="mainContent" class="p-4">
+
+  <div class="mb-4">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search"
+      class="w-full p-3 border rounded bg-gray-100"
+    />
+  </div>
+
+  <div class="mb-8">
+    <h2 class="text-xl mb-4">Select a supermarket</h2>
+    <div id="supermarketsGrid" class="grid grid-cols-2 gap-4">
+    </div>
+  </div>
+</div>
+
+<div id="notificationsBar" class="fixed top-0 right-0 bottom-0 w-80 bg-white border-l transform translate-x-full">
+</div>
+
+<div id="cartBar" class="fixed top-0 right-0 bottom-0 w-80 bg-white border-l transform translate-x-full">
+</div>
+
+<script type = "module" src="./js/mainApp.js"></script>
+</body>
+</html>

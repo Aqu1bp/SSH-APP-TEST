@@ -4,12 +4,10 @@ class Cart:
         self.total_price = 0.0
 
     def get_item_price(self, item_name):
-        # Hard-coded instead of an actual API call to grocery stores
         prices = {
-            "apple": 1.0,
-            "banana": 0.5,
-            "orange": 0.75,
-            "Chocolate bar": 1.5,
+            "apple": 5,
+            "banana": 3,
+            "chocolate bar": 10,
         }
         return prices.get(item_name, 0.0)
 
@@ -17,7 +15,7 @@ class Cart:
         discounts = {
             "apple": {"type": "percentage", "value": 10},
             "banana": {"type": "threshold", "threshold": 5, "value": 20},
-            "orange": {"type": "bogo", "x": 2, "y": 1},
+            "chocolate bar": {"type": "bogo", "x": 2, "y": 1},
         }
         return discounts.get(item_name, {})
 
@@ -37,7 +35,7 @@ class Cart:
                     "quantity": quantity,
                     "price": price,
                     "added_by": added_by,
-                    "id": len(self.cart) + 1  # Simple ID generation
+                    "id": len(self.cart) + 1
                 })
             self.update_total()
         else:
@@ -85,3 +83,88 @@ class Cart:
         for item in self.cart:
             discounted_price = self.calculate_discount(item)
             self.total_price += discounted_price
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

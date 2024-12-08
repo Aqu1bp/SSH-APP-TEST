@@ -1,9 +1,9 @@
-# views.py
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 import json
 from .models import Cart
+from .supermarketAPI import SupermarketAPI
 
 shared_cart = Cart()
 
@@ -33,7 +33,9 @@ def add_to_cart(request):
             'total_price': shared_cart.total_price
         })
     except Exception as e:
-        return JsonResponse({'error': str(e)}, status=400)
+        return JsonResponse({
+                'error'
+            })
 
 @csrf_exempt
 @require_http_methods(["POST"])
@@ -54,9 +56,22 @@ def remove_from_cart(request):
             })
         else:
             return JsonResponse({
-                'error': 'Item not found or not owned by student'
-            }, status=404)
+                'error'
+            })
             
     except Exception as e:
         print(f"Error {str(e)}")
+
+@csrf_exempt
+@require_http_methods(["GET"])
+def get_products(request):
+
+    try:
+        api = SupermarketAPI()
+        return JsonResponse(api.get_products())
+    
+    except Exception as e:
+        return JsonResponse({
+            'error'
+        })
     
