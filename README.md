@@ -3,8 +3,7 @@ Instructions:
 Prerequisites
 
   Ensure you have the following installed:
-        Docker
-        Python 3.x (for the HTTP server)
+        Docker, Python 3.x (for the HTTP server)
 
 
 To run the application, follow these steps:
