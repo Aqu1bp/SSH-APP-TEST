@@ -1,42 +1,53 @@
-Instructions:
+## Prerequisites
 
-Prerequisites
+- Docker
+- Python 3.x (for HTTP server)
 
-  Ensure you have the following installed:
-        Docker, Python 3.x (for the HTTP server)
+## Installation and Setup
 
+### 1. Backend Setup (Docker)
 
-To run the application, follow these steps:
+Clone the repository and navigate to the project directory:
 
-Step 1: Build and Run the Backend Using Docker
+```bash
+cd project-directory
+docker-compose up --build
+```
 
-Open a terminal and navigate to the project directory.
-Build and start the Docker container for the backend:
+### 2. Frontend Setup
 
-    docker-compose up --build
-    
-Step 2: Use Python for http server
+In a new terminal window, start the Python HTTP server:
 
-Open a new terminal window.
-Navigate to the frontend directory:
+```bash
+cd frontend
 
-```cd frontend```
+# For Windows
+python -m http.server 8080
 
-Start the Python HTTP server:
+# For macOS/Linux
+python3 -m http.server 8080
+```
 
-For windows:
+The application will be accessible at:
+```
+http://localhost:8080/frontend/mainPage.html
+```
 
-```python -m http.server 8080```
+## Running Tests
 
-For mac:
+Ensure Docker container is running, then execute:
+```bash
+docker-compose run django pytest -v
+```
 
-```python3 -m http.server 8080```
+## Features
 
-The frontend will now be accessible at http://localhost:8080/frontend/mainPage.html.
+- Add items to cart
+- Remove items from cart
+- Calculate discounts:
+  - Percentage-based discounts
+  - Threshold-based discounts
+  - Buy-one-get-one deals
+- Multi-user support
+- Real-time price updates
 
-
-To run the tests, use:
-
-```docker-compose run django pytest -v```
-
-Note: Tests can only be run after docker container is created.
