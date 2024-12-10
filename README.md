@@ -33,3 +33,10 @@ For mac:
 ```python3 -m http.server 8080```
 
 The frontend will now be accessible at http://localhost:8080/frontend/mainPage.html.
+
+
+To run the tests, use:
+
+```docker-compose run django pytest -v```
+
+Note: Tests can only be run after docker container is created.
