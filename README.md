@@ -24,6 +24,12 @@ Navigate to the frontend directory:
 
 Start the Python HTTP server:
 
+For windows:
+
 ```python -m http.server 8080```
+
+For mac:
+
+```python3 -m http.server 8080```
 
 The frontend will now be accessible at http://localhost:8080/frontend/mainPage.html.
