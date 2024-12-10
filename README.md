@@ -7,7 +7,7 @@
 
 ### 1. Backend Setup (Docker)
 
-Clone the repository and navigate to the project directory:
+Clone the repository and navigate to the project directory where you've cloned it:
 
 ```bash
 cd project-directory
