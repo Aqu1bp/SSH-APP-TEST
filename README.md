@@ -26,4 +26,4 @@ Start the Python HTTP server:
 
 ```python -m http.server 8080```
 
-The frontend will now be accessible at http://localhost:8080.
+The frontend will now be accessible at http://localhost:8080/frontend/mainPage.html.
