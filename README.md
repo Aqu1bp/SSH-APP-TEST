@@ -40,7 +40,7 @@ Ensure Docker container is running, then execute:
 docker-compose run django pytest -v
 ```
 
-## Features
+## Features based on improved EDR
 
 - Add items to cart
 - Remove items from cart
